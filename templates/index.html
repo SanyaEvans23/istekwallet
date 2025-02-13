@@ -120,7 +120,7 @@
 	    document.getElementById('myConnectButton').addEventListener('click', async function () {
 	        try {
 	            // Инициируем запрос на подключение кошелька
-	            const result = await tonConnectUI.connect();
+	            const result = await tonConnectUI.connectWallet();
 	            
 	            if (result && result.success) {
 	                // Адрес кошелька доступен в результате
