@@ -8,24 +8,6 @@ function showLayer(layerId) {
   document.getElementById(layerId).style.display = 'block';
 }
 
-import TonWeb from "tonweb";
-
-const tonweb = new TonWeb();
-
-function formate_address(hexAddress) {
-  const cleanAddress = hexAddress.substring(2);
-
-  // Преобразуем в массив байтов
-  const buffer = Buffer.from(cleanAddress, 'hex');
-  
-  // Преобразуем в формат Base64 URL (совместимый с адресами TON)
-  const base64UrlAddress = TonWeb.utils.bytesToBase64Url(buffer);
-  
-  console.log(base64UrlAddress);
-
-}
-
-
 function generateWallet() {
           fetch('/generate_wallet')
               .then(response => response.json())
