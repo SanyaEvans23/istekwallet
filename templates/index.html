@@ -108,34 +108,31 @@
     </div>
   </div>
   <script defer>
-	document.addEventListener("DOMContentLoaded", function () {
-	    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-	        manifestUrl: 'https://istekwallet.onrender.com/static/tonconnect/tonconnect-manifest.json',
-	    });
-	
-	    tonConnectUI.uiOptions = {
-	        twaReturnUrl: 'https://t.me/IstekWalletBot'
-	    };
-	
-	    document.getElementById('myConnectButton').addEventListener('click', async function () {
-	        try {
-	            // Инициируем запрос на подключение кошелька
-	            const result = await tonConnectUI.connectWallet();
-	            
-	            if (result && result.success) {
-	                // Адрес кошелька доступен в результате
-	                const walletAddress = result.walletAddress;
-	                
-	                console.log(`Адрес кошелька: ${walletAddress}`);
-	
-	                // Здесь вы можете сохранить адрес или использовать его для других целей
-	            } else {
-	                console.error('Не удалось подключиться к кошельку.');
-	            }
-	        } catch (error) {
-	            console.error('Ошибка подключения кошелька:', error);
-	        }
-	    });
+	document.addEventListener("DOMContentLoaded", function() {
+		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+			manifestUrl: 'https://istekwallet.onrender.com/static/tonconnect/tonconnect-manifest.json',
+		});
+
+		tonConnectUI.uiOptions = {
+			twaReturnUrl: 'https://t.me/YOUR_APP_NAME'
+		};
+
+		document.getElementById('myConnectButton').addEventListener('click', async function() {
+			try {
+				const wallet = await tonConnectUI.connectWallet();
+				console.log('Подключен кошелек:', formate_address(wallet));
+				
+				// Вывод адреса кошелька в консоль
+				if (wallet && wallet.account && wallet.account.address) {
+					console.log('Адрес кошелька:', wallet.account.address);
+				} else {
+					console.error('Адрес кошелька не найден');
+				}
+
+			} catch (error) {
+				console.error('Ошибка подключения:', error);
+			}
+		});
 	});
   </script>
  
