@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(23, 67, 150);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.big-txt-btn {
+  margin: 10px;
+    /* Добавление скруглённых углов */
+  border-radius: 30px;
+  /* border: 1px solid #000; */
+  padding: 10px 20px;
+  color:rgb(23, 67, 150);
+  background: rgb(245, 245, 255);
+  font-size: x-large;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 90%;
+}
+
+.settings-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: x-large;
+    background: none;
+    border: none;
+}
+
+.Title {
+    margin-top: 30px;
+    font-family: Inter, sans-serif;
+    color: rgb(215, 225, 255);
+    font-size: xx-large;
+}
+
+.vryad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.vryad p {
+    color: rgb(215, 225, 255);
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.vryad img {
+    width: 50px;
+    height: 50px;
+}
+
+.strelka {
+    font-size: xx-large;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+.down-line {
+    width: 100%;
+    height: 130px;
+    background-image: linear-gradient(to top,  #0d2d68 20%, #141c688e 50%,rgb(13, 52, 124) 70%, rgb(21, 67, 153) 100%);
+    position: fixed; /* Линия закреплена внизу экрана */
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* margin: 20px 0; */
+
+}
+.down-line button{
+    font-size: xx-large;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 0px;
+
+}
+
+h1{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: Inter, sans-serif;
+    color: rgb(215, 225, 255);
+}
+
+h2{
+  color:rgb(215, 225, 255)
+}
+
+.mnemonic-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+    }
+    .column {
+        flex: 1;
+    }
+    .mnemonic-item {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+    .mnemonic-number {
+        width: 25px;
+        font-weight: normal;
+        color: gray;
+        margin-right: 5px;
+    }
