@@ -120,7 +120,6 @@
 		document.getElementById('myConnectButton').addEventListener('click', async function() {
 			try {
 				const wallet = await tonConnectUI.connectWallet();
-				console.log('Подключен кошелек:', formate_address(wallet));
 				
 				// Вывод адреса кошелька в консоль
 				if (wallet && wallet.account && wallet.account.address) {
